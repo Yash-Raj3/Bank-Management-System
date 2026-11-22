@@ -1,0 +1,97 @@
+1794821066|new-customer|Requested new Savings account 1001 for Yash
+1794821199|admin|Logged in as Administrator
+1794821213|admin|Approved account 1001
+1794821223|admin|Logged out
+1794821235|customer:1001|Logged in
+1794823403|admin|Logged in as Administrator
+1794823420|admin|Added staff Yash as Manager
+1794823429|admin|Logged out
+1794823437|Yash|Logged in as Manager
+1794823458|Yash|Logged out
+1794823464|admin|Logged in as Administrator
+1794823479|admin|Added staff Khunais as Teller
+1794823482|admin|Logged out
+1794823488|Khunais|Logged in as Teller
+1794832917|admin|Logged in as Administrator
+1794832993|admin|Froze account 1001
+1794833000|admin|Logged out
+1794833031|Yash|Logged in as Manager
+1794833051|Yash|Unfroze account 1001
+1794833055|Yash|Logged out
+1794833068|customer:1001|Failed PIN attempt
+1794833084|customer:1001|Failed PIN attempt
+1794833096|customer:1001|Failed PIN attempt
+1794833096|customer:1001|Account locked after too many wrong PINs
+1794833108|Yash|Logged in as Manager
+1794833122|Yash|Unlocked account 1001
+1794833129|Yash|Logged out
+1794833136|customer:1001|Failed PIN attempt
+1794833147|customer:1001|Failed PIN attempt
+1794833159|Yash|Failed login attempt
+1794833169|Yash|Logged in as Manager
+1794833188|Yash|Reset PIN of account 1001
+1794833193|Yash|Logged out
+1794833199|customer:1001|Logged in
+1794833224|customer:1001|Deposited 8966666.00 into account 1001
+1794833259|customer:1001|Loan request 1 of 4000000.00 for account 1001
+1794833277|customer:1001|Logged out
+1794833292|Khunais|Logged in as Teller
+1794833337|Khunais|Logged out
+1794833343|admin|Logged in as Administrator
+1794833360|admin|Rejected loan 1
+1794833363|admin|Logged out
+1794833369|customer:1001|Failed PIN attempt
+1794833380|customer:1001|Logged in
+1794833401|customer:1001|Loan request 2 of 7800000.00 for account 1001
+1794833415|customer:1001|Logged out
+1794833428|Yash|Logged in as Manager
+1794833435|Yash|Approved loan 2
+1794833466|Yash|Applied interest of 5.00% to 1 savings accounts
+1794833474|Yash|Logged out
+1794833485|customer:1001|Logged in
+1794833521|customer:1001|Instalment paid for loan 2
+1794835937|Yash|Logged in as Manager
+1794835947|Yash|Logged out
+1794835960|customer:1001|Logged in
+1794837336|customer:1001|Logged in
+1794837473|customer:1001|Logged in
+1794837599|customer:1001|Withdrew 25000.00 from account 1001
+1794837607|customer:1001|Withdrew 8500.00 from account 1001
+1794837614|customer:1001|Withdrew 2500.00 from account 1001
+1794837631|customer:1001|Withdrew 2650.00 from account 1001
+1794837637|customer:1001|Withdrew 10000.00 from account 1001
+1794837647|customer:1001|Upgrade request to Platinum submitted for account 1001
+1794837659|customer:1001|Logged out
+1794837669|admin|Logged in as Administrator
+1794837682|admin|Approved upgrade of account 1001 to Platinum
+1794837685|admin|Logged out
+1794837692|customer:1001|Logged in
+1794837720|customer:1001|Logged out
+1794837752|new-customer|Requested new Current account 1002 for Yash
+1794837772|Yash|Logged in as Manager
+1794837793|Yash|Logged out
+1794837800|admin|Failed login attempt
+1794837807|admin|Logged in as Administrator
+1794837826|admin|Approved account 1002
+1794837831|admin|Logged out
+1794837839|customer:1002|Logged in
+1794837849|customer:1002|Paid Gas bill of 85000.00 from account 1002
+1794923794|admin|Failed login attempt
+1794923802|admin|Logged in as Administrator
+1794923821|admin|Changed bank rule 1
+1794923832|admin|Changed bank rule 3
+1794923934|admin|Logged out
+1794923939|Yash|Logged in as Manager
+1794923964|Yash|Issued service token 1
+1794923977|Yash|Served service token 1
+1794923998|Yash|Logged out
+1794924033|new-customer|Requested new Current account 1003 for Qasim
+1794924046|Yash|Logged in as Manager
+1794924064|Yash|Logged out
+1794924069|admin|Logged in as Administrator
+1794924077|admin|Approved account 1003
+1794924080|admin|Logged out
+1794924091|customer:1003|Logged in
+1794924112|customer:1003|Logged out
+1795366703|Yash|Logged in as Manager
+1795366705|Yash|Logged out
