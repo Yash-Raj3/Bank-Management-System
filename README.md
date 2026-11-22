@@ -1,25 +1,10 @@
-# 🏦 Enterprise Bank Management System (C++)
-
-[![C++ Standard](https://img.shields.io/badge/C%2B%2B-11-blue.svg?style=flat-square&logo=c%2B%2B)](https://en.wikipedia.org/wiki/C%2B%2B11)
-[![Standard Library](https://img.shields.io/badge/STL%20Containers-None%20(Pure%20DSA)-red.svg?style=flat-square)](https://github.com/)
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=flat-square)](https://github.com/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg?style=flat-square)](https://github.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+# Bank Management System (C++)
 
 A high-performance, console-based **Bank Management System** developed in modern C++ (C++11). 
 
 Built strictly **without the C++ Standard Template Library (STL)** containers or `std::string`, every foundational data structure—from self-balancing AVL Trees and Hash Tables to Heaps and Graphs—is engineered completely from scratch with direct dynamic memory management.
 
 ---
-
-> ### 🎓 Academic Project Information
-> - **University:** FAST NUCES
-> - **Group Members:**
->   1. **Yash Raj** (25K-0878)
->   2. **Khunais Baig** (25K-0508)
-
----
-
 ## 📑 Table of Contents
 - [✨ Key Highlights](#-key-highlights)
 - [🧠 Data Structures & Complexity Analysis](#-data-structures--complexity-analysis)
@@ -65,33 +50,60 @@ Built strictly **without the C++ Standard Template Library (STL)** containers or
 
 ```mermaid
 flowchart TD
-    Start([Application Start: main.cpp]) --> Load[FileManager::loadAll\nLoad accounts, users, loans, rules, transactions]
-    Load --> Init[Initialize BankData & Modules]
-    Init --> Menu{Main Menu}
+    Start(["Application Start: main.cpp"]) --> Load["Load Persistent Data (FileManager)"]
+    Load --> Init["Initialize BankData and Modules"]
+    Init --> Menu{"Main Menu"}
 
-    Menu -->|1| StaffLogin[Staff Authentication\nUserHashTable O 1]
-    Menu -->|2| CustomerLogin[Customer Authentication\nAccountHashTable O 1]
-    Menu -->|3| OpenAccount[Customer Registration\nEnqueued into approvalQueue]
-    Menu -->|0| SaveExit[FileManager::saveAll\nSave all records] --> End([Exit])
+    Menu -->|"1"| StaffLogin["Staff Authentication (UserHashTable)"]
+    Menu -->|"2"| CustomerLogin["Customer Authentication (AccountHashTable)"]
+    Menu -->|"3"| OpenAccount["Customer Registration (Queue)"]
+    Menu -->|"0"| SaveExit["Save All Records and Backup"] --> End(["Exit"])
 
     OpenAccount --> Menu
 
-    %% Staff Branch
-    StaffLogin --> RoleCheck{Role Check}
-    RoleCheck -->|Teller| TellerMenu[Counter Menu\n- Deposit / Withdraw / Transfer\n- MaxHeap & IntQueue Tokens\n- TransactionStack Undo]
-    RoleCheck -->|Manager| ManagerMenu[Management Menu\n- Process Loans\n- Transfer Tracking via Graph BFS\n- Interest & Dormant Checks]
-    RoleCheck -->|Admin| AdminMenu[Administrator Menu\n- Dequeue approvalQueue\n- Staff UserHashTable\n- AuditLog & Backup]
+    StaffLogin --> RoleCheck{"Role Check"}
+    RoleCheck -->|"Teller"| TellerMenu["Teller Menu: Counter Ops, Queue, Undo"]
+    RoleCheck -->|"Manager"| ManagerMenu["Manager Menu: Loans, BFS Graph, Audits"]
+    RoleCheck -->|"Admin"| AdminMenu["Admin Menu: Staff Provisioning, Rules"]
 
-    TellerMenu --> SaveAuto[FileManager::saveAll]
+    TellerMenu --> SaveAuto["Auto Save (FileManager)"]
     ManagerMenu --> SaveAuto
     AdminMenu --> SaveAuto
     SaveAuto --> Menu
 
-    %% Customer Branch
-    CustomerLogin --> CustMenu[Customer Menu\n- Check Balance\n- Deposit / Withdraw with Daily Limits\n- Transfer Funds\n- Mini-Statement from TransactionList]
-    CustMenu --> Transact[Execute Transaction]
+    CustomerLogin --> CustMenu["Customer Menu: Balance, Limits, Transfer, Ledger"]
+    CustMenu --> Transact["Execute Transaction"]
     Transact --> SaveAuto
 ```
+
+<details>
+<summary><b>Text-Based Flowchart (Fallback)</b></summary>
+
+```text
+[Start Application]
+       |
+       v
+[Load Data and Initialize BankData]
+       |
+       v
+ [ Main Menu ] --( 0. Exit )--> [ Save Records and Backup ] --> [ Exit ]
+       |
+       +--( 1. Staff Login )-----> [ UserHashTable Auth ]
+       |                                  |
+       |                                  v
+       |                           [ Role Check ]
+       |                           +-- Teller  --> [ Counter Ops, Tokens, Undo ]
+       |                           +-- Manager --> [ Loans, BFS Graph, Audits ]
+       |                           +-- Admin   --> [ Approvals, Staff Mgmt ]
+       |
+       +--( 2. Customer Login )--> [ AccountHashTable Auth ]
+       |                                  |
+       |                                  v
+       |                           [ Balance, Limits, Transfers, Mini-Statement ]
+       |
+       +--( 3. Open Account )----> [ Enqueue for Admin Approval ]
+```
+</details>
 
 ---
 
