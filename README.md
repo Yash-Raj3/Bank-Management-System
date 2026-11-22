@@ -247,4 +247,4 @@ For an in-depth mathematical and structural explanation of every custom data str
 ---
 
 ## 📜 License
-This project was developed for educational and academic purposes under the **MIT License**. Feel free to inspect, learn from, and adapt the custom data structures!
+This project was developed for educational and academic purposes. Feel free to inspect, learn from, and adapt the custom data structures!
