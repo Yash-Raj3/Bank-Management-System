@@ -228,12 +228,6 @@ All system states are automatically saved to local flat files after every state-
 
 ---
 
-## 📄 Documentation
-
-For an in-depth mathematical and structural explanation of every custom data structure and its memory layout, refer to the included [Bank_Management_System_DSA_Documentation.pdf](Bank_Management_System_DSA_Documentation.pdf).
-
----
-
 ## 👨‍💻 Project Team & University
 
 - **University:** FAST NUCES (National University of Computer and Emerging Sciences)
